@@ -1,0 +1,7 @@
+#! /bin/bash
+
+DOCKER_PS=$(docker ps -q)
+
+if [ -n "$DOCKER_PS" ]; then
+    docker stop $DOCKER_PS
+fi
